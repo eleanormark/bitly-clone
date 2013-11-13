@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Url</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href= "../">Bitly Clone</a>
+    </div>
+    <!-- <nav class="collapse navbar-callapse bs-navbar-collapse" role="navigation" > -->
+    <ul class="nav navbar-nav" id="user_header">
+    <!-- <div id="user_header">   -->
+      <% if current_user %>
+        <li><%= link_to "Account for #{current_user.email}", user_path(current_user) %><li>
+        <li><%= link_to "Log Out", session_path("current"), method: "delete" %></li>
+      <% else %>
+        <li> <%= link_to "Sign Up", new_user_path %></li>
+        <li><%= link_to "Log In", new_session_path %></li>
+      <% end %>
+    <!-- </div> -->
+    </ul>
+    <!-- </nav> -->
+    <%= flash[:alert] %>
+    <%= yield %>
+  </div>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<h4>URL Information</h4>
+
+<p>Original: <%= @url.original %></p>
+<p>Short Section: <%= @url.short %></p>
+<p>Shortened: <%= link_to "#{root_url}" + "visits/" + "#{@url.short}", root_url + "visits/" + "#{@url.short}" %></p>
+<p>Total number of visits by logged in users: <%= @url.visits.count %></p>

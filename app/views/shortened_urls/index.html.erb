@@ -1,0 +1,24 @@
+<br>
+<br>
+<hr>
+<h4> List of all URLs in our system </h4>
+<div class="well">
+  <div class="table-responsive">
+  <table class='table table-hover'>
+      <thead>
+      <tr>
+        <th>Original URL</th>
+        <th>Short URL</th>
+        <th>Visits</th>
+      </tr>
+    </thead>
+    <% @urls.each do |url| %>
+  </tbody>
+       <td> <%= url.original %></td>
+        <td><%= link_to "#{root_url}" + "visits/" + "#{url.short}", root_url + "visits/" + "#{url.short}" %></td>
+        <td><%= url.visits.count %></td>
+      </tbody>
+    <% end %>
+  </table>
+  </div>
+</div>

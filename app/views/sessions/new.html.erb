@@ -1,0 +1,24 @@
+<br>
+<br>
+<hr>
+<h4>Log In</h4>
+<div class="container">
+  <title>SignUp</title>
+  <div class="row">
+    <div class="span4">
+      <div class="well">
+        <%= form_tag sessions_path do %>
+        <div class="field">
+          <%= label_tag :email %><br>
+          <%= text_field_tag :email, params[:email] %>
+        </div>
+        <div class="field">
+          <%= label_tag :password %><br>
+         <%= password_field_tag :password %>
+        </div>
+        <div class="actions"><%= submit_tag "Log In" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

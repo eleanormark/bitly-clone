@@ -1,0 +1,7 @@
+development:
+  adapter: postgresql
+  database: url_development
+
+test:
+  adapter: postgresql
+  database: url_test
