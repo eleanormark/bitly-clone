@@ -13,11 +13,11 @@
       </tr>
     </thead>
     <% @urls.each do |url| %>
-  </tbody>
-       <td> <%= url.original %></td>
-        <td><%= link_to "#{root_url}" + "visits/" + "#{url.short}", root_url + "visits/" + "#{url.short}" %></td>
-        <td><%= url.visits.count %></td>
-      </tbody>
+    <tbody>
+      <td> <%= url.original %></td>
+      <td><%= link_to "#{root_url}" + "visits/" + "#{url.short}", root_url + "visits/" + "#{url.short}" %></td>
+      <td><%= url.visits.count %></td>
+    </tbody>
     <% end %>
   </table>
   </div>
