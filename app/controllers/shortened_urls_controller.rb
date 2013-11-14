@@ -10,7 +10,6 @@ class ShortenedUrlsController < ApplicationController
 
   def create
     @url = current_user.shortened_urls.create(url_params)
-    #redirect_to shortened_url_path(@url)
     redirect_to user_path(current_user)
   end
 
