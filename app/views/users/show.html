@@ -16,21 +16,21 @@
 <div class="well">
   <div class="table-responsive">
   <table class='table'>
-      <thead>
-        <tr>
-          <th>Original URL</th>
-          <th>Short URL</th>
-          <th>Visits</th>
-        </tr>
-      </thead>
-      <% @user.shortened_urls.each do |url| %>
-      </tbody>    
+    <thead>
+      <tr>
+        <th>Original URL</th>
+        <th>Short URL</th>
+        <th>Visits</th>
+      </tr>
+    </thead>
+    <% @user.shortened_urls.each do |url| %>
+    </tbody>    
       <% unless url.original.blank? %>
         <td> <%= url.original %></td>
         <td><%= link_to "#{root_url}" + "visits/" + "#{url.short}", root_url + "visits/" + "#{url.short}" %></td>
         <td><%= url.visits.count %></td>
-        <% end %>
-      </tbody>
+      <% end %>
+    </tbody>
     <% end %>
   </table>
   </div>
